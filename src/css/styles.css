@@ -1,0 +1,89 @@
+html {
+  background: #2980b9;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+}
+
+#wrapper {
+  margin: 150px auto;
+  width: 400px;
+  background-color: #cf455c;
+  color: #ffffff;
+  border-radius: 10px;
+}
+
+#wrapper form {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  position: relative;
+  top: 20px;
+}
+
+form input[type='text'] {
+  padding: 10px;
+  width: 70%;
+  border-radius: 20px;
+  border: 0;
+}
+
+input[type='text']:focus {
+  outline: none;
+}
+
+form input[type="submit"] {
+  padding: 12px;
+  border: 0;
+  width: 20%;
+  background-color: #ffdd67;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.weather-info h1 {
+  font-size: 4.5rem;
+  padding-top: 20px;
+  padding-left: 30px;
+}
+
+.weather-info h2 {
+  font-size: 2.5rem;
+  padding-left: 30px;
+}
+
+.weather-info h3 {
+  font-size: 1rem;
+  padding-left: 30px;
+}
+
+.other-info {
+  display: flex;
+  justify-content: space-around;
+  margin: 5px;
+  padding-bottom: 25px;
+}
+
+.other-info div {
+  flex: 1 1;
+  background-color: #fff;
+  color: #000;
+  margin: 0 5px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.other-info p {
+  font-size: 1.5rem;
+  padding: 10px 0;
+}
+
+.other-info h2 {
+  font-size: 1rem;
+  padding: 10px 0;
+  font-weight: 400;
+}
+
+div.icon {
+  margin-top: 10px;
+  font-size: 3em;
+}
