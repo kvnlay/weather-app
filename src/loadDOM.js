@@ -3,6 +3,7 @@ import {
   converter
 } from './helpers';
 
+const dataContainer = document.getElementById('data');
 const loader = document.getElementById('loader');
 const form = document.querySelector('#weather-form');
 
@@ -22,8 +23,10 @@ const hideSpinner = () => {
 
 const loadErr = err => {
   if (err) {
-    const errContainer = document.getElementById('message');
+    const errContainer = document.createElement('div');
+    errContainer.id = 'message';
     errContainer.innerHTML = 'Location not found';
+    dataContainer.appendChild(errContainer);
   }
 };
 
@@ -62,7 +65,6 @@ const loadErr = err => {
 // };
 
 const loadDom = city => {
-  const dataContainer = document.getElementById('data');
   clear(dataContainer);
 
   const weatherInfo = document.createElement('div');
