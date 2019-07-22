@@ -1,23 +1,38 @@
 html {
-  background: #2980b9;
+  background: #EDE574;
   /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
-  background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
+  background: -webkit-linear-gradient(to top, #E1F5C4, #EDE574);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #E1F5C4, #EDE574);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 #wrapper {
   margin: 150px auto;
   width: 400px;
-  background-color: #cf455c;
+  /* background-color: #cf455c; */
+  background: #56CCF2;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to top, #2F80ED, #56CCF2);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to top, #2F80ED, #56CCF2);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #ffffff;
   border-radius: 10px;
+  padding-bottom: 10px;
+}
+
+.header {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #ffdd67;
+  padding-top: 10px;
 }
 
 #wrapper form {
   margin-bottom: 20px;
   margin-left: 10px;
-  position: relative;
-  top: 20px;
+  padding: 15px;
 }
 
 form input[type='text'] {
@@ -27,7 +42,8 @@ form input[type='text'] {
   border: 0;
 }
 
-input[type='text']:focus {
+input[type='text']:focus,
+input[type='submit']:focus {
   outline: none;
 }
 
@@ -40,44 +56,54 @@ form input[type="submit"] {
   cursor: pointer;
 }
 
-.weather-info h1 {
+#message {
+  text-align: center;
+  font-size: 1.3rem;
+  padding-bottom: 10px;
+}
+
+#weather-info h1 {
   font-size: 4.5rem;
-  padding-top: 20px;
+  padding-top: 10px;
   padding-left: 30px;
+  color: #ffdd67;
 }
 
-.weather-info h2 {
-  font-size: 2.5rem;
+#weather-info h2 {
+  font-size: 1.7rem;
   padding-left: 30px;
+  margin-bottom: 5px;
 }
 
-.weather-info h3 {
-  font-size: 1rem;
+#weather-info h3 {
+  font-size: 1.4rem;
   padding-left: 30px;
+  margin-bottom: 15px;
+  color: #444444;
 }
 
-.other-info {
+#other-info {
   display: flex;
   justify-content: space-around;
   margin: 5px;
   padding-bottom: 25px;
 }
 
-.other-info div {
+#other-info div {
   flex: 1 1;
   background-color: #fff;
-  color: #000;
+  color: #444444;
   margin: 0 5px;
   text-align: center;
   border-radius: 10px;
 }
 
-.other-info p {
+#other-info p {
   font-size: 1.5rem;
   padding: 10px 0;
 }
 
-.other-info h2 {
+#other-info h2 {
   font-size: 1rem;
   padding: 10px 0;
   font-weight: 400;
@@ -86,4 +112,75 @@ form input[type="submit"] {
 div.icon {
   margin-top: 10px;
   font-size: 3em;
+}
+
+.info-card {
+  padding: 20px;
+}
+
+/* spinner */
+
+#loader {
+  border: 10px solid #f3f3f3;
+  /* Light grey */
+  border-top: 10px solid #ffdd67;
+  /* Blue */
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 10px;
+  width: 60px;
+  height: 60px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.hidden {
+  display: none;
+}
+
+span {
+  content: "\00B0";
+}
+
+/* unit toggler */
+
+.toggler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+  border-radius: 7px;
+  margin: 1em 0 1em auto;
+  width: 92px;
+  cursor: pointer;
+}
+
+.unit {
+  padding: 5px 15px;
+  background-color: #ffdd67;
+  border: 1px solid rgba(255, 221, 103, 0.6);
+}
+
+.unit.active {
+  background-color: #ff8a5c;
+  border: 1px solid #ffdd67;
+}
+
+.unit:first-child {
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
+}
+
+.unit:last-child {
+  border-top-right-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
