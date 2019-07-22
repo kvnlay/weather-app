@@ -159,8 +159,6 @@ span {
   align-items: center;
   color: #ffffff;
   border-radius: 7px;
-  margin: 1em 0 1em auto;
-  width: 92px;
   cursor: pointer;
 }
 
@@ -173,6 +171,7 @@ span {
 .unit.active {
   background-color: #ff8a5c;
   border: 1px solid #ffdd67;
+  pointer-events: none;
 }
 
 .unit:first-child {

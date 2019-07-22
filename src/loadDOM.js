@@ -30,39 +30,42 @@ const loadErr = err => {
   }
 };
 
-// const changeUnit = el => {
-//   document.querySelector('.active').classList.remove('active');
-//   el.classList.add('active');
-// };
+const changeUnit = el => {
+  const els = document.querySelectorAll('.unit.active');
+  els.forEach(elem => elem.classList.remove('active'));
+  el.classList.add('active');
+};
 
-// const createToggler = parent => {
-//   const div = document.createElement('div');
-//   div.classList.add('toggler');
-//   const cels = document.createElement('div');
-//   cels.innerHTML = '<span>&#176;</span>C';
-//   cels.id = 'celcius';
-//   const fahr = document.createElement('div');
-//   fahr.innerHTML = '<span>&#176;</span>F';
-//   fahr.id = 'fahrenheit';
-//   [cels, fahr].forEach(child => {
-//     child.classList.add('unit');
-//     div.appendChild(child);
-//   });
-//   cels.classList.add('active');
-//   parent.appendChild(div);
+const createToggler = parent => {
+  const div = document.createElement('div');
+  div.classList.add('toggler');
+  const cels = document.createElement('div');
+  cels.innerHTML = '<span>&#176;</span>C';
+  cels.id = 'C';
+  const fahr = document.createElement('div');
+  fahr.innerHTML = '<span>&#176;</span>F';
+  fahr.id = 'F';
+  [cels, fahr].forEach(child => {
+    child.classList.add('unit');
+    div.appendChild(child);
+  });
+  cels.classList.add('active');
+  parent.appendChild(div);
 
-//   cels.addEventListener('click', e => {
-//     const temprature = document.getElementById('temp');
-//     changeUnit(e.target);
-//     temprature.innerHTML = converter('C', parseInt(temprature.innerHTML, 10));
-//   });
+  cels.addEventListener('click', e => {
+    if (e.target.classList.contains('active')) return;
+    const temprature = document.getElementById('temp');
+    changeUnit(e.target);
+    temprature.innerHTML = `${converter('C', parseInt(temprature.innerHTML, 10))}°C`;
+  });
 
-//   fahr.addEventListener('click', e => {
-//     const temprature = document.getElementById('temp');
-//     changeUnit(e.target);
-//     temprature.innerHTML = converter('F', parseInt(temprature.innerHTML, 10));
-//   });
-// };
+  fahr.addEventListener('click', e => {
+    if (e.target.classList.contains('active')) return;
+    const temprature = document.getElementById('temp');
+    changeUnit(e.target);
+    temprature.innerHTML = `${converter('F', parseInt(temprature.innerHTML, 10))}°F`;
+  });
+};
 
 const loadDom = city => {
   clear(dataContainer);
@@ -132,7 +135,7 @@ const loadDom = city => {
 
   [weatherInfo, otherInfo].forEach(child => dataContainer.appendChild(child));
 
-  // createToggler(dataContainer);
+  createToggler(dataContainer);
 };
 
 const listeners = () => {
