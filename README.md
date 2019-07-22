@@ -4,7 +4,7 @@ A Weather App page built using vanilla JavaScript & OpenWeather API. Users can i
 
 ## Contributors
 
-(Kingsley Omotayo)[https://github.com/kvnlay]
+[Kingsley Omotayo](https://github.com/kvnlay)
 
 ## Live version
 
@@ -18,17 +18,16 @@ A Weather App page built using vanilla JavaScript & OpenWeather API. Users can i
 - Webpack
 - Openweather API
 
-
 ## How to use
 
 Firstly, clone this project into your local machine/computer
 
-```git clone https://github.com/kvnlay/weather-app.git```
+`git clone https://github.com/kvnlay/weather-app.git`
 
 Visit the project index file
 
-```cd ../weather-app/dist ```
+`cd ../weather-app/dist`
 
-open ```index.html``` with your preffered browser
+open `index.html` with your preffered browser
 
 Fill the form with the name of the city whose weather you want to find out about and wait for the results.
