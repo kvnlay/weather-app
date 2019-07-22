@@ -75,11 +75,18 @@ form input[type="submit"] {
   margin-bottom: 5px;
 }
 
+.w-info {
+  display: flex;
+  align-items: center;
+}
+
 #weather-info h3 {
   font-size: 1.4rem;
   padding-left: 30px;
   margin-bottom: 15px;
   color: #444444;
+  margin-left: -25px;
+  margin-top: 13px;
 }
 
 #other-info {

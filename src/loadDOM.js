@@ -80,10 +80,19 @@ const loadDom = city => {
   const name = document.createElement('h2');
   name.innerHTML = `${city.name}, ${city.sys.country}`;
 
+  const icon = document.createElement('img');
+  icon.src = `http://openweathermap.org/img/wn/${city.weather[0].icon}@2x.png`;
+  icon.alt = city.weather[0].description;
+
   const weather = document.createElement('h3');
   weather.innerHTML = city.weather[0].description;
 
-  [temp, name, weather].forEach(child => {
+  const w = document.createElement('div');
+  w.classList.add('w-info');
+  w.appendChild(icon);
+  w.appendChild(weather);
+
+  [temp, name, w].forEach(child => {
     weatherInfo.appendChild(child);
   });
 
