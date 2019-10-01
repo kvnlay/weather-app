@@ -2,6 +2,8 @@
 
 A Weather App page built using vanilla JavaScript & OpenWeather API. Users can input city location, submit the form and get live weather data of any location in the world.
 
+![weather_app](https://user-images.githubusercontent.com/21004010/65952343-a8eec580-e439-11e9-814b-e77e89557dc5.png)
+
 ## Contributors
 
 [Kingsley Omotayo](https://github.com/kvnlay)
